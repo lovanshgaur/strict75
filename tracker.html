@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict-75 | Tracker</title>
+    <link rel="stylesheet" href="utils.css">
+    <style>
+        main {
+            flex-direction: column;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .header-text h5 {
+            font-family: var(--fontMono);
+            color: var(--muted);
+        }
+
+        .header-text h1 {
+            font-family: var(--fontSerif);
+            color: var(--accent);
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .stats {
+            color: var(--muted);
+            font-size: 0.75rem;
+            font-family: var(--fontMono);
+        }
+
+        #progress {
+            width: 100%;
+        }
+
+        .topic-section {
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        .topic-name {
+            font-family: var(--fontMono);
+            color: var(--color);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: bold;
+        }
+
+        .topic-name::after {
+            content: "";
+            height: 1px;
+            background: var(--border);
+            flex-grow: 1;
+        }
+
+        .question-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .question {
+            background: rgba(255, 255, 255, 0.02);
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.2 ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .level-easy:hover {
+            border-color: var(--easy);
+            box-shadow: 1 0 4px rgba(63, 185, 80, 0.3);
+        }
+
+        .level-medium:hover {
+            border-color: var(--medium);
+            box-shadow: 0 0 4px rgba(210, 153, 34, 0.3);
+
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 0.25rem;
+            margin-right: 1rem;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .readonly {
+            pointer-events: none;
+            opacity: 0;
+            cursor: default;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: var(--theme);
+            border-color: var(--theme);
+        }
+
+        input[type="checkbox"]:checked::after {
+            content: "✓";
+            color: var(--background);
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .question-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .question-name {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .level-badge {
+            font-size: 0.65rem;
+            font-family: var(--fontMono);
+            text-transform: uppercase;
+            padding: 1px 6px;
+            border-radius: 0.5rem;
+            width: fit-content;
+        }
+
+        .level-easy .level-badge {
+            color: var(--easy);
+            border: 1px solid rgba(63, 185, 80, 0.3);
+        }
+
+        .level-medium .level-badge {
+            color: var(--medium);
+            border: 1px solid rgba(210, 153, 34, 0.3);
+        }
+
+        input[type="checkbox"]:checked~.question-wrapper .question-name {
+            color: var(--muted);
+            text-decoration: line-through;
+        }
+
+        input[type="checkbox"]:checked~.question-wrapper .level-badge {
+            opacity: 0.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+    <main class="container">
+        <header>
+            <div class="header-text">
+                <h5>Strict-75</h5>
+                <h1>Progress Tracker</h1>
+            </div>
+            <div class="header-data">
+                <div class="stats" id="counter">0 / 0 Solved</div>
+            </div>
+        </header>
+        <div id="progress"></div>
+    </main>
+
+    <script>
+
+        const progress = document.getElementById('progress');
+        const counter = document.getElementById('counter');
+        let total = 0;
+        let completed = 0;
+
+        function updateCounter() {
+            counter.innerText = `${completed} / ${total} Solved`
+        }
+        async function loadQuestions() {
+            try {
+
+                const response = await fetch('tracker.json')
+                const data = await response.json();
+
+                for (const [topic, questions] of Object.entries(data)) {
+                    const section = document.createElement('div');
+                    section.className = 'topic-section'
+
+                    const title = document.createElement('div');
+                    title.className = 'topic-name';
+                    title.innerText = topic.replace(/_/g, '');
+                    section.appendChild(title)
+
+                    const questionContainer = document.createElement('div');
+                    questionContainer.className = 'question-container';
+
+                    questions.forEach(question => {
+                        total++
+                        if (question.isComplete) completed++;
+
+                        const label = document.createElement('label')
+                        label.className = "question"
+
+                        const questionLevel = question.level.toLowerCase() === 'easy' ? 'level-easy' : 'level-medium';
+                        label.classList.add(questionLevel)
+
+                        label.innerHTML = `
+                        <input type="checkbox" disabled ${question.isComplete ? 'class="checked"' : 'class="readonly"'} ${question.isComplete ? 'checked' : ''}>
+                        <div class="question-wrapper">
+                            <span class="question-name">${question.name}</span>
+                            <span class="level-badge">${question.level}</span>
+                        </div>
+                        `
+
+                        questionContainer.appendChild(label)
+                    });
+
+                    section.appendChild(questionContainer)
+                    progress.appendChild(section)
+                    updateCounter();
+                }
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        loadQuestions()
+    </script>
+</body>
+
+</html>

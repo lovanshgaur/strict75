@@ -1,0 +1,305 @@
+{
+  "Array_String": [
+    {
+      "name": "Merge Strings Alternately",
+      "level": "Easy",
+      "isComplete": true
+    },
+    {
+      "name": "Greatest Common Divisor of Strings",
+      "level": "Easy",
+      "isComplete": true
+    },
+    {
+      "name": "Kids With the Greatest Number of Candies",
+      "level": "Easy",
+      "isComplete": false
+    },
+    { "name": "Can Place Flowers", "level": "Easy", "isComplete": false },
+    {
+      "name": "Reverse Vowels of a String",
+      "level": "Easy",
+      "isComplete": false
+    },
+    {
+      "name": "Reverse Words in a String",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Product of Array Except Self",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Increasing Triplet Subsequence",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "String Compression", "level": "Medium", "isComplete": false }
+  ],
+  "Two_Pointers": [
+    { "name": "Move Zeroes", "level": "Easy", "isComplete": false },
+    { "name": "Is Subsequence", "level": "Easy", "isComplete": false },
+    {
+      "name": "Container With Most Water",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Max Number of K-Sum Pairs",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Sliding_Window": [
+    {
+      "name": "Maximum Average Subarray I",
+      "level": "Easy",
+      "isComplete": false
+    },
+    {
+      "name": "Maximum Number of Vowels in a Substring of Given Length",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Max Consecutive Ones III",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Longest Subarray of 1's After Deleting One Element",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Prefix_Sum": [
+    {
+      "name": "Find the Highest Altitude",
+      "level": "Easy",
+      "isComplete": false
+    },
+    { "name": "Find Pivot Index", "level": "Easy", "isComplete": false }
+  ],
+  "Hash_Map_Set": [
+    {
+      "name": "Find the Difference of Two Arrays",
+      "level": "Easy",
+      "isComplete": false
+    },
+    {
+      "name": "Unique Number of Occurrences",
+      "level": "Easy",
+      "isComplete": false
+    },
+    {
+      "name": "Determine if Two Strings Are Close",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Equal Row and Column Pairs",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Stack": [
+    {
+      "name": "Removing Stars From a String",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "Asteroid Collision", "level": "Medium", "isComplete": false },
+    { "name": "Decode String", "level": "Medium", "isComplete": false }
+  ],
+  "Queue": [
+    { "name": "Number of Recent Calls", "level": "Easy", "isComplete": false },
+    { "name": "Dota2 Senate", "level": "Medium", "isComplete": false }
+  ],
+  "Linked_List": [
+    {
+      "name": "Delete the Middle Node of a Linked List",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "Odd Even Linked List", "level": "Medium", "isComplete": false },
+    { "name": "Reverse Linked List", "level": "Easy", "isComplete": false },
+    {
+      "name": "Maximum Twin Sum of a Linked List",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Binary_Tree_DFS": [
+    {
+      "name": "Maximum Depth of Binary Tree",
+      "level": "Easy",
+      "isComplete": false
+    },
+    { "name": "Leaf-Similar Trees", "level": "Easy", "isComplete": false },
+    {
+      "name": "Count Good Nodes in Binary Tree",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "Path Sum III", "level": "Medium", "isComplete": false },
+    {
+      "name": "Longest ZigZag Path in a Binary Tree",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Lowest Common Ancestor of a Binary Tree",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Binary_Tree_BFS": [
+    {
+      "name": "Binary Tree Right Side View",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Maximum Level Sum of a Binary Tree",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Binary_Search_Tree": [
+    {
+      "name": "Search in a Binary Search Tree",
+      "level": "Easy",
+      "isComplete": false
+    },
+    { "name": "Delete Node in a BST", "level": "Medium", "isComplete": false }
+  ],
+  "Graphs_DFS": [
+    { "name": "Keys and Rooms", "level": "Medium", "isComplete": false },
+    { "name": "Number of Provinces", "level": "Medium", "isComplete": false },
+    {
+      "name": "Reorder Routes to Make All Paths Lead to the City Zero",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "Evaluate Division", "level": "Medium", "isComplete": false }
+  ],
+  "Graphs_BFS": [
+    {
+      "name": "Nearest Exit from Entrance in Maze",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "Rotting Oranges", "level": "Medium", "isComplete": false }
+  ],
+  "Heap_Priority_Queue": [
+    {
+      "name": "Kth Largest Element in an Array",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Smallest Number in Infinite Set",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Maximum Subsequence Score",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Total Cost to Hire K Workers",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Binary_Search": [
+    {
+      "name": "Guess Number Higher or Lower",
+      "level": "Easy",
+      "isComplete": false
+    },
+    {
+      "name": "Successful Pairs of Spells and Potions",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "Find Peak Element", "level": "Medium", "isComplete": false },
+    { "name": "Koko Eating Bananas", "level": "Medium", "isComplete": false }
+  ],
+  "Backtracking": [
+    {
+      "name": "Letter Combinations of a Phone Number",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "Combination Sum III", "level": "Medium", "isComplete": false }
+  ],
+  "DP_1D": [
+    { "name": "N-th Tribonacci Number", "level": "Easy", "isComplete": false },
+    {
+      "name": "Min Cost Climbing Stairs",
+      "level": "Easy",
+      "isComplete": false
+    },
+    { "name": "House Robber", "level": "Medium", "isComplete": false },
+    {
+      "name": "Domino and Tromino Tiling",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "DP_Multidimensional": [
+    { "name": "Unique Paths", "level": "Medium", "isComplete": false },
+    {
+      "name": "Longest Common Subsequence",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Best Time to Buy and Sell Stock with Transaction Fee",
+      "level": "Medium",
+      "isComplete": false
+    },
+    { "name": "Edit Distance", "level": "Medium", "isComplete": false }
+  ],
+  "Bit_Manipulation": [
+    { "name": "Counting Bits", "level": "Easy", "isComplete": false },
+    { "name": "Single Number", "level": "Easy", "isComplete": false },
+    {
+      "name": "Minimum Flips to Make a OR b Equal to c",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Trie": [
+    {
+      "name": "Implement Trie (Prefix Tree)",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Search Suggestions System",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Intervals": [
+    {
+      "name": "Non-overlapping Intervals",
+      "level": "Medium",
+      "isComplete": false
+    },
+    {
+      "name": "Minimum Number of Arrows to Burst Balloons",
+      "level": "Medium",
+      "isComplete": false
+    }
+  ],
+  "Monotonic_Stack": [
+    { "name": "Daily Temperatures", "level": "Medium", "isComplete": false },
+    { "name": "Online Stock Span", "level": "Medium", "isComplete": false }
+  ]
+}
