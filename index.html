@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strict-75 | LovanshGaur</title>
-    
+
     <link rel="stylesheet" href="utils.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         .hero {
             flex: 2;
@@ -78,8 +81,11 @@
             border: 1px solid var(--border);
             border-radius: 0.5rem;
             transition: all 0.3s ease;
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
+
 
         a:hover {
             background: var(--accent);
@@ -116,22 +122,32 @@
         <div class="links-container">
             <h3>Other Links</h3>
             <div class="links">
-
                 <a rel="noopener" href="https://github.com/lovanshgaur/strict75" target="_blank">
-                    Give this Repo a <span>★</span>
+                    <i data-lucide="star"></i>
+                    Give this Repo a ★
                 </a>
+
                 <a rel="noopener" href="https://lovansh.me/" target="_blank">
-                    Checkout my other works <span>→</span>
+                    <i data-lucide="folder-git-2"></i>
+                    Checkout my other works
                 </a>
+
                 <a rel="noopener" href="https://leetcode.com/studyplan/leetcode-75/" target="_blank">
-                    Take on the Strict-75 <span>↗</span>
+                    <i data-lucide="rocket"></i>
+                    Take on the Strict-75
                 </a>
+
                 <a rel="noopener" href="tracker.html" target="_blank">
-                    Progress Tracker <span>↗</span>
+                    <i data-lucide="bar-chart-3"></i>
+                    Progress Tracker
                 </a>
             </div>
+
         </div>
     </main>
+    <script>
+          lucide.createIcons();
+    </script>
 </body>
 
 </html>
