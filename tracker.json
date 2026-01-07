@@ -29,7 +29,7 @@
     {
       "name": "Product of Array Except Self",
       "level": "Medium",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "name": "Increasing Triplet Subsequence",
