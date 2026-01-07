@@ -13,18 +13,18 @@
     {
       "name": "Kids With the Greatest Number of Candies",
       "level": "Easy",
-      "isComplete": false
+      "isComplete": true
     },
-    { "name": "Can Place Flowers", "level": "Easy", "isComplete": false },
+    { "name": "Can Place Flowers", "level": "Easy", "isComplete": true },
     {
       "name": "Reverse Vowels of a String",
       "level": "Easy",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "name": "Reverse Words in a String",
       "level": "Medium",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "name": "Product of Array Except Self",
