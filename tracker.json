@@ -34,9 +34,9 @@
     {
       "name": "Increasing Triplet Subsequence",
       "level": "Medium",
-      "isComplete": false
+      "isComplete": true
     },
-    { "name": "String Compression", "level": "Medium", "isComplete": false }
+    { "name": "String Compression", "level": "Medium", "isComplete": true }
   ],
   "Two_Pointers": [
     { "name": "Move Zeroes", "level": "Easy", "isComplete": false },
